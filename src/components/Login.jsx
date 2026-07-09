@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../assets/Login.css'
 import {useNavigate} from 'react-router-dom'
 
@@ -9,9 +9,10 @@ export default function Login(props) {
     const [cPass, setCPass] = useState(false)
     const [username, setUsername] = useState("")
 
-    console.log(props.context.users)
 
-    props.context.user.isLoggedIn? navigate("/home"):""
+    useEffect(()=>{
+        props.context.user.isLoggedIn? navigate("/home"):""
+    },[props.context.user])
 
     function handleLogin(formData){
         const username = formData.get("username")
@@ -114,7 +115,7 @@ export default function Login(props) {
                     <input type="password" placeholder="confirm Password" id='confirmPassword' name='confirmPassword' />
                 </div>
                 {cPass && <center style={{color: "red"}}>Password does not match</center >}
-                <button type="submit">Login</button>
+                <button type="submit">Register</button>
                 <p onClick={()=>{
                     setWantLogin(true)
                 }}>Login / singIn</p>
