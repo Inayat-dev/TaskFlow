@@ -1,0 +1,145 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:white;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1{
+    font-size: 24px;
+    color: #333;
+}
+
+h1 span{
+    color: #007BFF;
+}
+
+.nav-bar{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.nav-bar div span{
+    color:#007BFF;
+    font-weight: 900;
+    font-size: large;
+}
+
+.nav-bar div button{
+    color: white;
+    background-color: #ff0000;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 5px; 
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 ;
+    width: 100%;
+}
+
+.task-input{
+    background-color: #fff;
+    width: fit-content;
+    padding: 20px;
+    margin: 10px ;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-input input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 40%;
+    margin: 5px;
+}
+
+.task-input select{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 45%;
+    margin: 5px;
+}
+
+.task-input button{
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.task-list{
+    background: #fff;
+    padding: 20px ;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow:  0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.task-list table{
+    width: 100%;
+}
+
+.task-list table th, .task-list table td{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+td button{
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.main-update{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(66, 15, 15,.2);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    margin-top: auto; /* auto ki jagah margin-top: auto use karo agar flex container hai */
+    border-top: 1px solid #eee; /* content se separate dikhega */
+    font-size: 14px;
+    color: #666;
+    width: 100%;
+}
